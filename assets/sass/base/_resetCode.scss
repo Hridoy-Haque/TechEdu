@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Nunito:wght@300;400;600;700;800&family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
 @import "veriables";
 @import "mixins";
@@ -36,6 +36,8 @@ section {
 
 .row {
   justify-content: center;
+  align-items: center;
+
   margin: 0 !important;
 }
 
@@ -63,15 +65,17 @@ button {
   }
 }
 
-// .btn-blog{
-//     display: inline-block;
-//     padding: 10px 40px;
-//     background-color: $dark;
-//     color:$light;
-//     margin-bottom: 15px;
-//     transition: .3s;
-//     &:hover{
-//         background-color: $dark-fade;
-//         color:$light;
-//     }
-// }
+.cmn_btn {
+  @include displayContent(inline-flex, center, center);
+  @include textStyle($font-14, $white, 400, 2px);
+  padding: 14px 40px;
+  background-color: $main_color;
+  border-radius: 2px;
+  i {
+    transition: transform 0.3s;
+    margin-left: 3px;
+  }
+  &:hover i {
+    transform: translateX(3px);
+  }
+}

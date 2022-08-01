@@ -6,9 +6,11 @@
 /*=================HEADER SUBMENU LAYOUT DESIGN===============================*/
 
 .header {
-  padding: 15px 0;
-  background-color: $fade_white;
+  height: 80px;
+  // background-color: $fade_white;
+  @include displayContent(flex, center, center);
   .navbar {
+    width: 100%;
     .container {
       // main menu
       .navbar-collapse {
@@ -113,6 +115,21 @@
   }
 }
 
+.hero_content {
+  margin: 0;
+  @include displayContent(flex, center, center);
+  .hero_details {
+    h1 {
+      @include textStyle($font-48, $main_color, 700, 1px);
+      font-family: "Nunito", sans-serif;
+    }
+    p {
+      @include textStyle($font-14, $fade_dark, 400, 0px);
+      margin: 20px 0;
+    }
+  }
+}
+
 @media only screen and (max-width: 1080px) {
   .header {
     .navbar {
@@ -128,6 +145,7 @@
         border-radius: 0 10px 10px 0;
         height: 100vh;
         width: 45%;
+        align-items: flex-start;
         transition: 0.4s all ease-in-out;
         box-shadow: 5px 0 10px rgba(184, 206, 233, 0.3);
         z-index: 999;
@@ -144,6 +162,7 @@
           padding: 30px 20px;
           flex-direction: column;
           margin-top: 30px;
+          width: 100%;
           & > li {
             margin-top: 10px !important;
           }
