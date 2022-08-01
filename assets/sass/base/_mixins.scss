@@ -1,10 +1,22 @@
+// texts decoration
 
+@mixin textStyle($font_size, $font_color, $font_weight, $font_space) {
+  color: $font_color !important;
+  font-size: $font_size !important;
+  font-weight: $font_weight;
+  letter-spacing: $font_space;
+}
 
-//create dynamic border
+@mixin positions($top, $left, $right, $bottom) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
 
-// @mixin border($brdWidth,$color) {
-//     border:  $brdWidth solid $color;
-// }
-
-// create responsive font size 
-
+@mixin displayContent($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}

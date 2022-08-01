@@ -1,6 +1,188 @@
 @import "base/mixins";
 @import "base/veriables";
 @import "base/resetCode";
-
+@import "base/responsive";
 
 /*=================HEADER SUBMENU LAYOUT DESIGN===============================*/
+
+.header {
+  padding: 15px 0;
+  background-color: $fade_white;
+  .navbar {
+    .container {
+      // main menu
+      .navbar-collapse {
+        a {
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+        }
+        .main_menu {
+          li {
+            margin: 0 10px;
+            &:hover > a {
+              color: $main_color !important;
+            }
+            a {
+              @include textStyle($normal-size, $dark_color, 400, 1px);
+              display: inline-block;
+              transition: 0.4s all ease-in-out;
+              position: relative;
+              text-transform: capitalize;
+              padding: 0;
+              &:hover,
+              &:focus,
+              &.active {
+                color: $main_color !important;
+              }
+              ion-icon {
+                display: none;
+              }
+            }
+
+            &.dropdown {
+              position: relative !important;
+              .dropdown-menu {
+                opacity: 0;
+                visibility: hidden;
+                display: block;
+                position: absolute;
+                top: calc(100% + 30px);
+                left: 0;
+                padding: 20px 0;
+                transition: 0.4s all ease-in-out;
+                border: 0 !important;
+                box-shadow: 0 5px 10px rgba(160, 203, 255, 0.3);
+                .dropdown-item {
+                  background-color: transparent;
+                  margin-bottom: 7px;
+                }
+                .dropdown {
+                  .dropdown-menu {
+                    opacity: 0;
+                    visibility: hidden;
+                    left: -165px;
+                    top: -22px;
+                  }
+
+                  &:hover {
+                    .dropdown-menu {
+                      opacity: 1;
+                      visibility: visible;
+                      left: -195px;
+                    }
+                  }
+                }
+              }
+
+              // first dropdown menu hover effect
+
+              &:hover {
+                // i {
+                //   transform: rotate(180deg);
+                // }
+                .dropdown-menu {
+                  opacity: 1;
+                  visibility: visible;
+                  top: calc(100% + 10px);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .social_menu {
+        li {
+          margin-left: 12px;
+          a {
+            @include displayContent(flex, center, center);
+            @include textStyle($normal-size, $dark_color, 400, 0);
+            transition: 0.4s all linear;
+
+            span {
+              margin-left: 2px;
+            }
+            &:hover {
+              color: $main_color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .header {
+    .navbar {
+      .show_button {
+        display: inline-block !important;
+      }
+
+      .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: $white;
+        border-radius: 0 10px 10px 0;
+        height: 100vh;
+        width: 45%;
+        transition: 0.4s all ease-in-out;
+        box-shadow: 5px 0 10px rgba(184, 206, 233, 0.3);
+        z-index: 999;
+        &.show_collapse {
+          left: 0;
+        }
+        .close_button {
+          display: inline-block;
+          position: absolute;
+          right: 30px;
+          top: 20px;
+        }
+        ul {
+          padding: 30px 20px;
+          flex-direction: column;
+          margin-top: 30px;
+          & > li {
+            margin-top: 10px !important;
+          }
+          overflow: auto;
+          .dropdown {
+            .dropdown-menu {
+              position: static !important;
+              clear: both;
+              height: 0 !important;
+              overflow: hidden;
+              text-align: center;
+              transition: height 0.4s ease;
+              padding: 0 !important;
+              transition: height 0.4s ease-in;
+              margin: 0 !important;
+              &.show_menu {
+                display: block !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                margin-top: 10px !important;
+                height: 230px !important;
+              }
+              .dropdown-item {
+                margin: 5px 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .header {
+    .navbar {
+      .navbar-collapse {
+        width: 65%;
+      }
+    }
+  }
+}

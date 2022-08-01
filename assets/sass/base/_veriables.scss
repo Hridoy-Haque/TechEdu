@@ -1,22 +1,18 @@
+//font sizes
 
-// @forward  "veriables";
-/*=============== COLOR CODES===================*/
+$normal-size: 16px;
+$font-14: 14px;
+$font-18: 18px;
+$font-20: 20px;
+$font-24: 24px;
+$font-28: 28px;
+$font-32: 32px;
+$font-48: 48px;
+$font-58: 58px;
+$font-64: 64px;
 
-    
-    $light : #fff;
-    $dark: #131212;
-
-    $link-active : #31b473;
-    $dark-fade : #363636;
-    $border-light : #e0dcdc; 
-    
-    $hero_details : rgba(0, 0, 0,.4);
-
-/*=============== FONT SIZE ===================*/
-
-    $normal-size : 16px;
-    $small-size : 14px;
-    $extra-small : 12px;
-
-
-/*=============== FONT FAMILY ===================*/
+//colors
+$white: #fff;
+$main_color: rgb(96, 84, 201);
+$dark_color: rgb(77, 74, 77);
+$fade_white: #f9f9f9;
