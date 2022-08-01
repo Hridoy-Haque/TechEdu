@@ -1,0 +1,58 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@import "veriables";
+@import "mixins";
+//reset code
+
+*,
+ul{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul li{
+    list-style: none;
+}
+
+i{
+    line-height: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    position: relative;
+    overflow: hidden !important;
+    margin:40px 0;
+}
+
+.row{
+    justify-content: center;
+}
+
+.logo-color{
+    color: $link-active;
+}
+
+// .btn-blog{
+//     display: inline-block;
+//     padding: 10px 40px;
+//     background-color: $dark;
+//     color:$light;
+//     margin-bottom: 15px;
+//     transition: .3s;
+//     &:hover{
+//         background-color: $dark-fade;
+//         color:$light;
+//     }
+// }
