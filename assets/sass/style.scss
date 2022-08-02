@@ -123,7 +123,6 @@
   .hero_details {
     h1 {
       @include textStyle($font-48, $main_color, 700, 1px);
-      font-family: "Nunito", sans-serif;
     }
     p {
       @include textStyle($font-14, $fade_dark, 400, 0px);
@@ -135,7 +134,9 @@
 // hero content style ===============>
 
 .feature {
-  .single_feature {
+  padding: 40px 0;
+  .single_feature,
+  .common {
     text-align: center;
     .hexagon {
       @include displayContent(inline-flex, center, center);
@@ -155,7 +156,6 @@
     h4 {
       margin: 15px 0 4px 0;
       text-transform: capitalize;
-      font-family: "Nunito", sans-serif;
       @include textStyle($font-24, $black_color, 400, 1px);
     }
     p {
@@ -166,23 +166,74 @@
 
 // campus content style ===============>
 
-.campus {
-  .campus_content {
+.campus_content,
+.common {
+  & > p {
+    color: $fade_dark;
+    margin-top: 20px;
+  }
+  div {
+    margin: 30px 0;
     p {
-      color: $fade_dark;
-      margin-top: 20px;
+      display: flex;
+      margin: 8px 0;
+      i {
+        color: $main_color;
+        font-size: $font-24;
+        margin-right: 6px;
+      }
+      span {
+        color: $fade_dark;
+      }
     }
-    div {
-      p {
-        display: flex;
-        margin-bottom: 25px;
-        i {
-          color: $main_color;
-          font-size: $font-24;
-          margin-right: 6px;
+  }
+}
+
+// choosing content style ===============>
+
+.choosing {
+  background-color: $fade_white;
+  .why_choose {
+    padding: 60px 15px;
+    transition: 0.5s all ease-in-out;
+    & > p {
+      i {
+        @include textStyle($font-48, $green_color, 600, 0);
+      }
+    }
+    p:nth-child(2) {
+      font-family: "Fira Code", monospace;
+      @include textStyle($font-18, $main_color, 600, 1px);
+      text-transform: uppercase;
+    }
+    p:nth-child(3) {
+      @include textStyle($font-14, $fade_dark, 300, 1px);
+    }
+    &:hover {
+      box-shadow: 0 0 30px rgba(160, 203, 255, 0.3);
+    }
+  }
+}
+
+// digital service content style ===============>
+
+.digital_service {
+  .service_content {
+    q {
+      @include textStyle($font-14, $dark_color, 400, 1px);
+      font-style: italic;
+      span {
+        background-color: $rgba_bg;
+      }
+    }
+    .writer {
+      @include displayContent(inline-flex, center, center);
+      .writer_ditails {
+        h5 {
+          @include textStyle($normal-size, $dark_color, 400, 1px);
         }
-        span {
-          color: $fade_dark;
+        h6 {
+          @include textStyle($font-14, $fade_dark, 400, 1px);
         }
       }
     }
