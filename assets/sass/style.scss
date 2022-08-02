@@ -115,6 +115,8 @@
   }
 }
 
+// hero content style ===============>
+
 .hero_content {
   margin: 0;
   @include displayContent(flex, center, center);
@@ -126,6 +128,63 @@
     p {
       @include textStyle($font-14, $fade_dark, 400, 0px);
       margin: 20px 0;
+    }
+  }
+}
+
+// hero content style ===============>
+
+.feature {
+  .single_feature {
+    text-align: center;
+    .hexagon {
+      @include displayContent(inline-flex, center, center);
+      height: 75px;
+      width: 65px;
+      clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+      background-color: $nevy_color;
+      transition: 0.4s all ease-in-out;
+      i {
+        font-size: $font-28;
+        color: $white;
+      }
+      &:hover {
+        background-color: $main_color;
+      }
+    }
+    h4 {
+      margin: 15px 0 4px 0;
+      text-transform: capitalize;
+      font-family: "Nunito", sans-serif;
+      @include textStyle($font-24, $black_color, 400, 1px);
+    }
+    p {
+      color: $fade_dark;
+    }
+  }
+}
+
+// campus content style ===============>
+
+.campus {
+  .campus_content {
+    p {
+      color: $fade_dark;
+      margin-top: 20px;
+    }
+    div {
+      p {
+        display: flex;
+        margin-bottom: 25px;
+        i {
+          color: $main_color;
+          font-size: $font-24;
+          margin-right: 6px;
+        }
+        span {
+          color: $fade_dark;
+        }
+      }
     }
   }
 }
