@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
+
 .subtitle {
   @include textStyle($font-20, $main_color, 700, 3px);
   text-transform: uppercase;

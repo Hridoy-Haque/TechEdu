@@ -33,4 +33,39 @@ window.addEventListener('load',()=>{
             }
         })
     })
+
+    // campus overview slider ==================>
+
+
+    const swiper = new Swiper(".mySwiper", {
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+//swiper-slide-active
+      const slider_count = Object.values(document.querySelectorAll('.swiper-slide')),
+            slider_components = Object.values(document.querySelectorAll('.single_component'));
+
+
+        setInterval((()=>{
+            slider_count.forEach((slider,index) =>{
+                if(slider.classList.contains('swiper-slide-active')){
+                    slider_components.forEach((component) =>{
+                        component.classList.remove('active')
+                        slider_components[index].classList.add('active')
+                    })
+                }
+                })
+        }),500)
+
+
+        
+        
+
+      
+
+
+
 })
+

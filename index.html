@@ -16,13 +16,14 @@
     />
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css" />
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
       integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    /> -->
+
     <!-- ======================= MAIN STYLE SHEET SETUP ========================== -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -117,10 +118,19 @@
     <main>
       <!--============================ hero content layout  ============================-->
 
-      <section class="hero_content pt-5 p-lg-0">
+      <section class="hero_content p-0">
         <div class="container">
           <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-7 order-lg-2">
+              <div class="hero_image">
+                <img
+                  src="assets/img/hero.png"
+                  alt="hero_img"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="col-lg-5 order-lg-1">
               <div class="hero_details">
                 <h1>Develop a passion for learning new things.</h1>
                 <p>
@@ -135,15 +145,6 @@
                 ></a>
               </div>
             </div>
-            <div class="col-lg-7">
-              <div class="hero_image">
-                <img
-                  src="assets/img/hero.png"
-                  alt="hero_img"
-                  class="img-fluid"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -154,7 +155,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 mt-3 mt-lg-0 col-lg-4">
-              <div class="single_feature common">
+              <div class="single_feature">
                 <div class="hexagon">
                   <i class="bx bxs-devices"></i>
                 </div>
@@ -295,7 +296,12 @@
       <section class="digital_service">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 col-lg-5">
+            <div class="col-md-6 col-lg-7 order-lg-2">
+              <div class="service_img">
+                <img src="assets/img/video.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 mt-5 mt-md-0 order-lg-1">
               <div class="service_content common">
                 <h2 class="subtitle">providing Digital Services</h2>
                 <p>
@@ -334,9 +340,107 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-7">
-              <div class="service_img">
-                <img src="assets/img/video.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!--============================ campus overview services layout  ============================-->
+
+      <section class="campuse_overview">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="slide_img">
+                      <img
+                        src="assets/img/slide_1.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_img">
+                      <img
+                        src="assets/img/slider_2.jpg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_img">
+                      <img
+                        src="assets/img/slider_3.jpg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide_img">
+                      <img
+                        src="assets/img/slider_4.jpg"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="slider_component">
+                <div class="single_component active">
+                  <div class="component_img">
+                    <i class="bx bx-scatter-chart"></i>
+                  </div>
+                  <div class="component_text">
+                    <h4>Grow Your Business</h4>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia.
+                    </p>
+                  </div>
+                </div>
+                <div class="single_component">
+                  <div class="component_img">
+                    <i class="bx bx-scatter-chart"></i>
+                  </div>
+                  <div class="component_text">
+                    <h4>Grow Your Business</h4>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia.
+                    </p>
+                  </div>
+                </div>
+                <div class="single_component">
+                  <div class="component_img">
+                    <i class="bx bx-scatter-chart"></i>
+                  </div>
+                  <div class="component_text">
+                    <h4>Grow Your Business</h4>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia.
+                    </p>
+                  </div>
+                </div>
+                <div class="single_component">
+                  <div class="component_img">
+                    <i class="bx bx-scatter-chart"></i>
+                  </div>
+                  <div class="component_text">
+                    <h4>Grow Your Business</h4>
+                    <p>
+                      Far far away, behind the word mountains, far from the
+                      countries Vokalia and Consonantia.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -350,12 +454,12 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script
+    <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
       integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></script> -->
     <!--================================= MAIN JS FILE SETUP   ==========================================-->
 
     <script src="assets/js/main.js"></script>
