@@ -230,6 +230,8 @@
     }
     .writer {
       @include displayContent(inline-flex, center, center);
+      margin: 0;
+      margin-top: 30px;
       .writer_ditails {
         h5 {
           @include textStyle($normal-size, $dark_color, 400, 1px);
@@ -255,8 +257,9 @@
           img {
             display: block;
             width: 100%;
-            height: 495px;
+            height: 550px;
             object-fit: cover;
+            border-radius: 10px;
           }
         }
       }
@@ -266,19 +269,19 @@
     .single_component {
       @include displayContent(flex, center, flex-start);
       column-gap: 30px;
-      background-color: $rgba_bg;
-      padding: 20px;
-      margin: 14px 0;
-      border-radius: 0 8px 8px 0;
+      padding: 25px 20px;
+      margin: 17px 0;
+      border-radius: 0 4px 4px 0;
       transition: 0.3s all ease-in-out;
       cursor: pointer;
       &.active {
-        border-right: 6px solid $main_color;
+        box-shadow: 0 0 20px $rgba_bg;
+        border-right: 4px solid $main_color;
       }
       .component_img {
         background-color: $main_color;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 4px;
         height: 40px;
         i {
           @include textStyle($font-20, $white, 400, 0);
@@ -287,6 +290,7 @@
       .component_text {
         h4 {
           @include textStyle($font-20, $main_color, 600, 2px);
+          text-transform: capitalize;
         }
         p {
           @include textStyle($font-14, $fade_dark, 400, 1px);
@@ -336,23 +340,17 @@
           .dropdown {
             .dropdown-menu {
               position: static !important;
-              clear: both;
-              height: 0 !important;
-              overflow: hidden;
               text-align: center;
               transition: height 0.4s ease;
               padding: 0 !important;
               transition: height 0.4s ease-in;
               margin: 0 !important;
+              height: 0;
+              opacity: 1 !important;
+              visibility: visible !important;
+              overflow: hidden;
               &.show_menu {
-                display: block !important;
-                opacity: 1 !important;
-                visibility: visible !important;
                 margin-top: 10px !important;
-                height: 230px !important;
-              }
-              .dropdown-item {
-                margin: 5px 0 !important;
               }
             }
           }
@@ -367,11 +365,51 @@
   }
 }
 
+@media only screen and (max-width: 991px) {
+  section {
+    padding: 40px 0;
+  }
+
+  .campuse_overview {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          .slide_img {
+            img {
+              height: 360px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 575px) {
   .header {
     .navbar {
+      .navbar-brand {
+        img {
+          max-width: 80%;
+        }
+      }
       .navbar-collapse {
         width: 65%;
+      }
+    }
+  }
+
+  //
+  .campuse_overview {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          .slide_img {
+            img {
+              height: 270px;
+            }
+          }
+        }
       }
     }
   }

@@ -13,23 +13,25 @@ window.addEventListener('load',()=>{
         nav_menu.classList.remove('show_collapse')
     }
 
-
-
     show_btn.addEventListener('click',showMenu)
     close_btn.addEventListener('click',hideMenu)
 
     // working on dropdown menu
 
-    const dropdownBtns = document.querySelectorAll('.dropdown>a')
+    const dropdownBtns = document.querySelectorAll('.dropdown > a');
 
-    dropdownBtns.forEach((dropdownBtn) => {
-        dropdownBtn.addEventListener('click',function(e){
+
+    dropdownBtns.forEach((dropBtn) =>{
+        dropBtn.addEventListener('click',(e)=>{
             e.preventDefault();
-            this.nextElementSibling.classList.toggle('show_menu')
-            if(this.nextElementSibling.classList.contains('show_menu')){
-                this.children[1].classList.add('rotate')
+            const menu = dropBtn.nextElementSibling;
+            
+            if(menu.classList.contains('show_menu')){
+                menu.removeAttribute('style')
+                menu.classList.remove('show_menu')
             }else{
-                this.children[1].classList.remove('rotate')
+                menu.style.height = menu.scrollHeight + 'px'
+                menu.classList.add('show_menu')
             }
         })
     })
@@ -39,7 +41,7 @@ window.addEventListener('load',()=>{
 
     const swiper = new Swiper(".mySwiper", {
         autoplay: {
-          delay: 2500,
+          delay: 6000,
           disableOnInteraction: false,
         },
       });
@@ -48,7 +50,7 @@ window.addEventListener('load',()=>{
             slider_components = Object.values(document.querySelectorAll('.single_component'));
 
 
-        setInterval((()=>{
+        setInterval(()=>{
             slider_count.forEach((slider,index) =>{
                 if(slider.classList.contains('swiper-slide-active')){
                     slider_components.forEach((component) =>{
@@ -57,15 +59,7 @@ window.addEventListener('load',()=>{
                     })
                 }
                 })
-        }),500)
-
-
-        
-        
-
-      
-
-
+        },[])
 
 })
 
