@@ -192,7 +192,7 @@
 // choosing content style ===============>
 
 .choosing {
-  background-color: $fade_white;
+  background-color: $blue_light;
   .why_choose {
     padding: 60px 15px;
     transition: 0.5s all ease-in-out;
@@ -420,6 +420,60 @@
           }
         }
       }
+    }
+  }
+}
+
+// responsive content style ===============>
+
+.footer {
+  .footer_bg {
+    padding: 80px 0;
+    background-color: $fade_white;
+    .newsletter {
+      padding-right: 60px;
+      h4 {
+        @include textStyle($font-18, $dark_color, 600, 2px);
+        margin-bottom: 20px;
+      }
+      p {
+        @include textStyle($font-14, $fade_dark, 400, 2px);
+      }
+    }
+    form {
+      .form-group {
+        position: relative;
+        input {
+          width: 100%;
+          height: 55px;
+          background-color: $rgba_bg;
+          border-radius: 50px;
+          padding-left: 20px;
+          color: $dark_color;
+        }
+        button {
+          @include positions(50%, auto, 0, auto);
+          @include displayContent(flex, center, center);
+          transform: translateY(-50%);
+          width: 100px;
+          height: 55px;
+          color: $white;
+          background-color: $main_color;
+          border-radius: 50px;
+          transition: 0.4s;
+          i {
+            font-size: $font-24;
+          }
+          &:hover {
+            background-color: $nevy_color;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    p {
+      @include textStyle($font-14, $fade_dark, 400, 2px);
     }
   }
 }

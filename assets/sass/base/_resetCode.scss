@@ -80,6 +80,11 @@ button {
   background-color: transparent;
 }
 
+input {
+  border: 0;
+  outline: 0;
+}
+
 .collapse:not(.show) {
   display: block;
 }
