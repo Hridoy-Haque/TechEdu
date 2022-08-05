@@ -95,18 +95,21 @@
       }
 
       .social_menu {
-        li {
-          margin-left: 12px;
-          a {
-            @include displayContent(flex, center, center);
-            @include textStyle($normal-size, $dark_color, 400, 0);
-            transition: 0.4s all linear;
+        .nav {
+          flex-wrap: nowrap;
+          li {
+            margin-left: 12px;
+            a {
+              @include displayContent(flex, center, center);
+              @include textStyle($normal-size, $dark_color, 400, 0);
+              transition: 0.4s all linear;
 
-            span {
-              margin-left: 2px;
-            }
-            &:hover {
-              color: $main_color !important;
+              span {
+                margin-left: 2px;
+              }
+              &:hover {
+                color: $main_color !important;
+              }
             }
           }
         }
@@ -547,6 +550,16 @@
     }
   }
 
+  //hero content ==========>
+
+  .hero_content {
+    .hero_details {
+      h1 {
+        font-size: $font-38 !important;
+      }
+    }
+  }
+
   // feature content =============>
   .feature {
     padding: 70px 0;
@@ -628,10 +641,8 @@
 
   .header {
     .navbar {
-      .navbar-brand {
-        img {
-          max-width: 80%;
-        }
+      img {
+        max-width: 75%;
       }
     }
   }
@@ -641,7 +652,7 @@
   .hero_content {
     .hero_details {
       h1 {
-        font-size: $font-28 !important;
+        font-size: $font-24 !important;
       }
     }
   }
