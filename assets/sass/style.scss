@@ -206,6 +206,7 @@
       font-family: "Fira Code", monospace;
       @include textStyle($font-18, $main_color, 600, 1px);
       text-transform: uppercase;
+      margin: 10px 0;
     }
     p:nth-child(3) {
       @include textStyle($font-14, $fade_dark, 300, 1px);
@@ -375,6 +376,7 @@
     margin-top: 40px;
     .swiper-wrapper {
       .swiper-slide {
+        transition: 0.7s all ease-in-out;
         .single_slide {
           background-color: $blue_light;
           border-radius: 10px;
@@ -403,6 +405,9 @@
                   color: $main_color !important;
                 }
               }
+            }
+            p {
+              color: $fade_dark;
             }
             .blog_topic {
               display: inline-block;
@@ -438,6 +443,7 @@
       }
       p {
         @include textStyle($font-14, $fade_dark, 400, 2px);
+        text-align: justify;
       }
     }
     form {
@@ -552,6 +558,16 @@
     padding: 40px 0;
   }
 
+  //hero content ==========>
+
+  .hero_content {
+    .hero_details {
+      h1 {
+        font-size: $font-32 !important;
+      }
+    }
+  }
+
   //campuse overview ==========>
 
   .campuse_overview {
@@ -567,9 +583,47 @@
       }
     }
   }
+
+  //blogs content ==========>
+
+  .blogs {
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          .single_slide {
+            .blog_details {
+              padding: 20px 10px;
+              h3 {
+                a {
+                  font-size: $font-18 !important;
+                }
+              }
+              p,
+              .blog_topic,
+              span {
+                font-size: $font-14;
+              }
+              .blog_topic {
+                margin-top: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
 }
 
 @media only screen and (max-width: 575px) {
+  //subtitle conent ==========>
+
+  .subtitle {
+    font-size: $normal-size !important;
+  }
+
   //header conent ==========>
 
   .header {
@@ -578,6 +632,37 @@
         img {
           max-width: 80%;
         }
+      }
+    }
+  }
+
+  //hero content ==========>
+
+  .hero_content {
+    .hero_details {
+      h1 {
+        font-size: $font-28 !important;
+      }
+    }
+  }
+
+  //feature content ==========>
+
+  .feature {
+    .single_feature,
+    .common {
+      h4 {
+        font-size: $font-18 !important;
+      }
+    }
+  }
+
+  //choosing content ==========>
+
+  .choosing {
+    .why_choose {
+      p:nth-child(2) {
+        font-size: $normal-size !important;
       }
     }
   }
@@ -592,6 +677,15 @@
             img {
               height: 270px;
             }
+          }
+        }
+      }
+    }
+    .slider_component {
+      .single_component {
+        .component_text {
+          h4 {
+            font-size: $normal-size !important;
           }
         }
       }
