@@ -46,7 +46,7 @@ window.addEventListener('load',()=>{
         },
       });
 //swiper-slide-active
-      const slider_count = Object.values(document.querySelectorAll('.swiper-slide')),
+      const slider_count = Object.values(document.querySelectorAll('.campus_slider > .swiper-wrapper > .swiper-slide')),
             slider_components = Object.values(document.querySelectorAll('.single_component'));
 
 

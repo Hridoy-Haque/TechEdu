@@ -273,7 +273,7 @@
       margin: 17px 0;
       border-radius: 0 4px 4px 0;
       transition: 0.3s all ease-in-out;
-      cursor: pointer;
+      cursor: default;
       &.active {
         box-shadow: 0 0 20px $rgba_bg;
         border-right: 4px solid $main_color;
@@ -300,7 +300,135 @@
   }
 }
 
+// course details content style ===============>
+
+.course_details {
+  .course_content-tabs {
+    @include displayContent(flex, center, center);
+    margin: 40px 0;
+    .nav-pills {
+      justify-content: center;
+      .nav-item {
+        margin: 10px;
+        .nav-link {
+          background-color: transparent;
+          @include textStyle($font-14, $fade_dark, 400, 1px);
+          text-transform: capitalize;
+          padding: 0;
+          &.active,
+          &:hover {
+            color: $main_color !important;
+          }
+        }
+      }
+    }
+  }
+  .course_content {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    .course_data {
+      padding: 0 20px;
+      .course_icon {
+        background-color: $rgba_bg;
+        // padding: 10px;
+        border-radius: 4px;
+        height: 40px;
+        width: 40px;
+        @include displayContent(flex, center, center);
+        i {
+          @include textStyle($font-32, $main_color, 400, 0);
+        }
+      }
+      h4 {
+        @include textStyle($normal-size, $main_color, 700, 2px);
+        text-transform: uppercase;
+        margin-top: 15px;
+        font-family: "Fira Code", monospace;
+      }
+      p {
+        @include textStyle($font-14, $fade_dark, 400, 1px);
+      }
+    }
+    .course_dotLines {
+      .dots {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background-color: $main_color;
+        border-radius: 50%;
+      }
+      .lines {
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: $main_color;
+        transform: translate(6px, -7px);
+      }
+    }
+  }
+}
+
+// blog content style ===============>
+
+.blogs {
+  .swiper {
+    margin-top: 40px;
+    .swiper-wrapper {
+      .swiper-slide {
+        .single_slide {
+          background-color: $blue_light;
+          border-radius: 10px;
+          .col-4 {
+            padding: 0;
+          }
+          .blog_img {
+            img {
+              height: 420px;
+              border-radius: 10px 0 0 10px;
+              background-position: center;
+              object-fit: cover;
+            }
+          }
+          .blog_details {
+            padding: 0 30px;
+            h2 {
+              text-transform: uppercase;
+              @include textStyle($font-14, $dark_color, 600, 1px);
+            }
+            h3 {
+              a {
+                @include textStyle($font-24, $dark_color, 600, 1px);
+                transition: 0.3s all ease-in-out;
+                &:hover {
+                  color: $main_color !important;
+                }
+              }
+            }
+            .blog_topic {
+              display: inline-block;
+              margin-top: 40px;
+              color: $dark_color;
+              text-transform: capitalize;
+            }
+            span {
+              margin-top: 10px;
+              span {
+                margin-left: 10px;
+                color: $dark_color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive content style ===============>
+
 @media only screen and (max-width: 1080px) {
+  // header content =============>
+
   .header {
     .navbar {
       .show_button {
@@ -314,7 +442,7 @@
         background-color: $white;
         border-radius: 0 10px 10px 0;
         height: 100vh;
-        width: 45%;
+        width: 100%;
         align-items: flex-start;
         transition: 0.4s all ease-in-out;
         box-shadow: 5px 0 10px rgba(184, 206, 233, 0.3);
@@ -370,6 +498,8 @@
     padding: 40px 0;
   }
 
+  //campuse overview ==========>
+
   .campuse_overview {
     .swiper {
       .swiper-wrapper {
@@ -386,6 +516,8 @@
 }
 
 @media only screen and (max-width: 575px) {
+  //header conent ==========>
+
   .header {
     .navbar {
       .navbar-brand {
@@ -393,13 +525,11 @@
           max-width: 80%;
         }
       }
-      .navbar-collapse {
-        width: 65%;
-      }
     }
   }
 
-  //
+  //campuse overview ==========>
+
   .campuse_overview {
     .swiper {
       .swiper-wrapper {
@@ -410,6 +540,22 @@
             }
           }
         }
+      }
+    }
+  }
+
+  //course details content ==========>
+
+  .course_details {
+    .course_data {
+      h4 {
+        @include textStyle($font-14, $main_color, 700, 2px);
+        line-height: 24px;
+      }
+      p {
+        font-size: 12px;
+        text-align: justify;
+        letter-spacing: 0;
       }
     }
   }
