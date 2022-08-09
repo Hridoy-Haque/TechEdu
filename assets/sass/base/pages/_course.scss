@@ -1,0 +1,40 @@
+@import "../mixins";
+@import "../veriables";
+@import "../veriables";
+
+.course_support {
+  .support_content {
+    margin-top: 40px !important;
+    .single_content {
+      background-color: $fade_white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      transition: 0.4s all ease;
+      cursor: default;
+      &:hover {
+        background-color: $white;
+        box-shadow: 0 0 20px $rgba_bg;
+      }
+      &:hover .content_img i {
+        color: $main_color;
+      }
+      .content_img {
+        i {
+          font-size: $font-58;
+          color: $nevy_color;
+          transition: 0.4s all ease;
+        }
+      }
+      .content_text {
+        h3 {
+          @include textStyle($font-18, $black_color, 600, 1px);
+          font-family: $fira_code;
+          margin: 15px 0;
+        }
+        p {
+          @include textStyle($font-14, $fade_dark, 400, 0);
+        }
+      }
+    }
+  }
+}

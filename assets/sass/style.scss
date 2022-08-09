@@ -1,14 +1,22 @@
 @import "base/mixins";
 @import "base/veriables";
 @import "base/resetCode";
-@import "base/responsive";
+@import "base/pages/about-us";
+@import "base/pages/blog";
+@import "base/pages/contact";
+@import "base/pages/course";
+@import "base/pages/instructor";
+@import "base/pages/signin";
+@import "base/pages/signup";
 
 /*=================HEADER SUBMENU LAYOUT DESIGN===============================*/
 
 .header {
   height: 80px;
-  // background-color: $fade_white;
+  min-width: 100%;
+  @include positions(0, 0, 0, auto);
   @include displayContent(flex, center, center);
+  z-index: 99999;
   .navbar {
     width: 100%;
     .container {
@@ -22,7 +30,8 @@
         .main_menu {
           li {
             margin: 0 10px;
-            &:hover > a {
+            &:hover > a,
+            .nav-link.active {
               color: $main_color !important;
             }
             a {
@@ -179,7 +188,7 @@
     margin: 30px 0;
     p {
       display: flex;
-      margin: 8px 0;
+      margin: 14px 0;
       i {
         color: $main_color;
         font-size: $font-24;
@@ -206,7 +215,7 @@
       }
     }
     p:nth-child(2) {
-      font-family: "Fira Code", monospace;
+      font-family: $fira_code;
       @include textStyle($font-18, $main_color, 600, 1px);
       text-transform: uppercase;
       margin: 10px 0;
@@ -347,7 +356,7 @@
         @include textStyle($normal-size, $main_color, 700, 2px);
         text-transform: uppercase;
         margin-top: 15px;
-        font-family: "Fira Code", monospace;
+        font-family: $fira_code;
       }
       p {
         @include textStyle($font-14, $fade_dark, 400, 1px);

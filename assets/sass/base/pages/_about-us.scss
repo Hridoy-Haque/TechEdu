@@ -1,0 +1,112 @@
+@import "../mixins";
+@import "../veriables";
+@import "../veriables";
+
+// about us hero ===============>
+
+.about_us-hero {
+  padding: 120px 0;
+  background-image: $about-us;
+}
+
+// about us feature ===============>
+
+.about_feature {
+  .single_featuer {
+    @include displayContent(flex, center, center);
+    column-gap: 12px;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px $rgba_bg;
+    .feature_icon {
+      i {
+        @include textStyle($font-64, $main_color, 400, 0);
+      }
+    }
+    .feature_details {
+      h4 {
+        font-family: $fira_code;
+        @include textStyle($font-20, $main_color, 600, 0);
+      }
+      p {
+        @include textStyle($normal-size, $fade_dark, 300, 1px);
+      }
+    }
+  }
+}
+
+// about us community ===============>
+
+.about_us-community {
+  .community {
+    padding: 60px 0;
+
+    .single_community {
+      box-shadow: 0 0 8px $rgba_bg;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      .community_img {
+        overflow: hidden;
+        position: relative;
+        a {
+          img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+          }
+        }
+        .img_details {
+          @include positions(auto, 0, 0, -120px);
+          opacity: 0;
+          visibility: hidden;
+          background-image: $about-us;
+          text-align: center;
+          padding: 20px 10px;
+          transition: 0.4s all ease-in-out;
+
+          p {
+            @include textStyle($font-14, $dark_color, 400, 1px);
+            font-family: $Source_sans;
+          }
+        }
+        &:hover .img_details {
+          bottom: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .community_details {
+        h4 {
+          a {
+            @include textStyle($normal-size, $main_color, 600, 2px);
+            font-family: $fira_code;
+            text-transform: uppercase;
+          }
+          margin-top: 15px;
+          margin-bottom: 0;
+        }
+        p {
+          @include textStyle($font-14, $fade_dark, 400, 1px);
+        }
+        ul {
+          margin-top: 10px;
+          li {
+            display: inline-block;
+            margin: 0 6px;
+            a {
+              // @include textStyle();
+              color: $fade_dark;
+              i {
+                transition: 0.5s;
+              }
+              &:hover i {
+                transform: rotateY(190deg);
+                color: $main_color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

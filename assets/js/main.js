@@ -66,5 +66,37 @@ window.addEventListener('load',()=>{
         let year = date.getFullYear();
         document.getElementById('year').innerHTML = year
 
+
+        // comunity slider
+        var comunity = new Swiper(".community", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+              },
+            breakpoints: {  
+                '575': {
+                  slidesPerView: 2,
+                  spaceBetween: 40,},
+                '767': {
+                  slidesPerView: 2,
+                  spaceBetween: 50, },
+                '991': {
+                  slidesPerView: 3,
+                  spaceBetween: 50, },
+                '1080': {
+                  slidesPerView: 4,
+                  spaceBetween: 50, },
+                '1200': {
+                  slidesPerView: 5,
+                  spaceBetween: 50, },
+            },
+          });
+
 })
 

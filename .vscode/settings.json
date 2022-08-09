@@ -10,8 +10,8 @@
     "editor.defaultFormatter": null
   },
   "[javascriptreact]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "javascript.validate.enable": false, //disable all built-in syntax checking
   "editor.codeActionsOnSave": {

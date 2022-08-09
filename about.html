@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enva Travel</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/Logo Icon 1.png" />
+
+    <!-- ========================= VENDOR STYLESHEET SETUP  ===================================== -->
+
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
+    <!-- ======================= MAIN STYLE SHEET SETUP ========================== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ================================ WORKING ON HEADER PART LAYOUT   ===================================-->
+
+    <header class="header">
+      <!-- ========================= main navbar ============================ -->
+
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <div class="d-flex align-items-center">
+            <button class="show_button menu_btn" type="button">
+              <i class="bx bx-menu-alt-left"></i>
+            </button>
+            <a href="index.html"><img src="assets/img/logo.png" alt="" /></a>
+          </div>
+
+          <div class="navbar-collapse collapse justify-content-xl-center">
+            <button class="close_button menu_btn" type="button">
+              <i class="bx bx-x"></i>
+            </button>
+            <ul class="navbar-nav main_menu">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link active">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="course.html" class="nav-link">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a href="instructors.html" class="nav-link">Instructors</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="blog.html"
+                  class="nav-link d-inline-flex justify-content-center align-items-center"
+                  ><span>blogs</span><i class="bx bx-chevron-down"></i
+                ></a>
+
+                <!-- first dropdown menu  -->
+
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item">
+                    <a href="course.html" class="dropdown-link">inner blogs</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="course.html" class="dropdown-link"
+                      >course related</a
+                    >
+                  </li>
+
+                  <li class="dropdown-item">
+                    <a href="course.html" class="dropdown-link"
+                      >student opinion</a
+                    >
+                  </li>
+
+                  <li class="dropdown-item">
+                    <a href="course.html" class="dropdown-link"
+                      >teachers insturction</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="social_menu">
+            <ul class="nav ms-auto">
+              <li class="nav-item">
+                <a href="signin.html"
+                  ><i class="bx bx-user"></i><span>login</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="signup.html"
+                  ><i class="bx bx-lock-alt"></i><span>register</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--============================ main content  ============================-->
+    <main>
+      <!--============================ about us hero content  ============================-->
+
+      <section class="about_us-hero">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                About-us
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <!--============================ about us feature content  ============================-->
+
+      <section class="about_feature">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="single_featuer">
+                <div class="feature_icon">
+                  <i class="bx bx-book-alt"></i>
+                </div>
+                <div class="feature_details">
+                  <h4>10+ advance courses</h4>
+                  <p>The automated process all your website tasks.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="single_featuer">
+                <div class="feature_icon">
+                  <i class="bx bx-user"></i>
+                </div>
+                <div class="feature_details">
+                  <h4>Expert instructors</h4>
+                  <p>The automated process all your website tasks.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="single_featuer">
+                <div class="feature_icon">
+                  <i class="bx bx-time-five"></i>
+                </div>
+                <div class="feature_details">
+                  <h4>Life time access</h4>
+                  <p>The automated process all your website tasks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--============================ digital services content  ============================-->
+
+      <section class="digital_service">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-7 order-lg-2">
+              <div class="service_img">
+                <img src="assets/img/video.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 mt-5 mt-md-0 order-lg-1">
+              <div class="service_content common">
+                <h2 class="subtitle">providing Digital Services</h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                  Separated they live in Bookmarksgrove right at the coast
+                </p>
+                <div>
+                  <p>
+                    <i class="bx bx-check-double"></i>
+                    <span>There live the blind texts</span>
+                  </p>
+                  <p>
+                    <i class="bx bx-check-double"></i>
+                    <span>Far far away behind the word</span>
+                  </p>
+                </div>
+                <q
+                  >“Separated they
+                  <span>
+                    live in Bookmarksgrove right at the coast of the
+                    Semantics,</span
+                  >
+                  a large language ocean. A small river named Duden flows by
+                  their place and supplies it with the necessary regelialia.
+                  ”</q
+                >
+                <div class="writer">
+                  <div class="writer_img">
+                    <img src="assets/img/writer.png" alt="" />
+                  </div>
+                  <div class="writer_ditails pt-2 ms-3">
+                    <h5>Hridoy Haque</h5>
+                    <h6><a href="#">Facebook</a>, Product Lead</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--============================ about us content  ============================-->
+
+      <section class="about_support">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-7">
+              <div class="support_img">
+                <img src="assets/img/service.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 mt-5 mt-md-0">
+              <div class="support_content common">
+                <h2 class="subtitle">
+                  Learner outcomes on courses you will take
+                </h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                  Separated they live in Bookmarksgrove right at the coast
+                </p>
+                <div>
+                  <p>
+                    <i class="bx bx-check-double"></i>
+                    <span>There live the blind texts</span>
+                  </p>
+                  <p>
+                    <i class="bx bx-check-double"></i>
+                    <span>Far far away behind the word</span>
+                  </p>
+                  <p>
+                    <i class="bx bx-check-double"></i>
+                    <span
+                      >Techniques to engage effectively with vulnerable children
+                      and young people.</span
+                    >
+                  </p>
+                  <p>
+                    <i class="bx bx-check-double"></i>
+                    <span
+                      >Join millions of people from around the world learning
+                      together.</span
+                    >
+                  </p>
+                  <p>
+                    <i class="bx bx-check-double"></i>
+                    <span
+                      >Join millions of people from around the world learning
+                      together. Online learning is as easy and natural.</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--============================ about us commiunity content  ============================-->
+
+      <section class="about_us-community">
+        <div class="container-fluid">
+          <div class="row text-center">
+            <div class="col-12">
+              <h2 class="title">Our Instructors</h2>
+              <p class="title_text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Exercitationem numquam soluta ratione!
+              </p>
+            </div>
+          </div>
+          <!-- community slider  -->
+          <div class="row">
+            <div class="col-12">
+              <div class="swiper community">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="single_community text-center">
+                      <div class="community_img">
+                        <a href=""
+                          ><img
+                            src="assets/img/xperson_1.jpg.pagespeed.ic.xVOD9vMtws.webp"
+                            alt=""
+                        /></a>
+                        <div class="img_details">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laborum sit doloribus autem ab ad.
+                            <a href="#">about more..</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="community_details">
+                        <h4><a href="#">steve anders</a></h4>
+                        <p>Software developer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#"
+                              ><i class="bx bxl-facebook" undefined></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-linkedin"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single_community text-center">
+                      <div class="community_img">
+                        <a href=""
+                          ><img
+                            src="assets/img/xperson_2.jpg.pagespeed.ic.YR2Fv_KyXq.webp"
+                            alt=""
+                        /></a>
+                        <div class="img_details">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laborum sit doloribus autem ab ad.
+                            <a href="#">about more..</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="community_details">
+                        <h4><a href="#">steve anders</a></h4>
+                        <p>Software developer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#"
+                              ><i class="bx bxl-facebook" undefined></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-linkedin"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single_community text-center">
+                      <div class="community_img">
+                        <a href=""
+                          ><img
+                            src="assets/img/xteam3.png.pagespeed.ic.GqRgzn_ZUz.webp"
+                            alt=""
+                        /></a>
+                        <div class="img_details">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laborum sit doloribus autem ab ad.
+                            <a href="#">about more..</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="community_details">
+                        <h4><a href="#">steve anders</a></h4>
+                        <p>Software developer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#"
+                              ><i class="bx bxl-facebook" undefined></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-linkedin"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single_community text-center">
+                      <div class="community_img">
+                        <a href=""
+                          ><img
+                            src="assets/img/xperson_1.jpg.pagespeed.ic.xVOD9vMtws.webp"
+                            alt=""
+                        /></a>
+                        <div class="img_details">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laborum sit doloribus autem ab ad.
+                            <a href="#">about more..</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="community_details">
+                        <h4><a href="#">steve anders</a></h4>
+                        <p>Software developer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#"
+                              ><i class="bx bxl-facebook" undefined></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-linkedin"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single_community text-center">
+                      <div class="community_img">
+                        <a href=""
+                          ><img
+                            src="assets/img/xperson_2.jpg.pagespeed.ic.YR2Fv_KyXq.webp"
+                            alt=""
+                        /></a>
+                        <div class="img_details">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laborum sit doloribus autem ab ad.
+                            <a href="#">about more..</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="community_details">
+                        <h4><a href="#">steve anders</a></h4>
+                        <p>Software developer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#"
+                              ><i class="bx bxl-facebook" undefined></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-linkedin"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single_community text-center">
+                      <div class="community_img">
+                        <a href=""
+                          ><img src="assets/img/team1.png.webp" alt=""
+                        /></a>
+                        <div class="img_details">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laborum sit doloribus autem ab ad.
+                            <a href="#">about more..</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="community_details">
+                        <h4><a href="#">steve anders</a></h4>
+                        <p>Software developer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#"
+                              ><i class="bx bxl-facebook" undefined></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-linkedin"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single_community text-center">
+                      <div class="community_img">
+                        <a href=""
+                          ><img
+                            src="assets/img/xteam3.png.pagespeed.ic.GqRgzn_ZUz.webp"
+                            alt=""
+                        /></a>
+                        <div class="img_details">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Laborum sit doloribus autem ab ad.
+                            <a href="#">about more..</a>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="community_details">
+                        <h4><a href="#">steve anders</a></h4>
+                        <p>Software developer</p>
+                        <ul class="social">
+                          <li>
+                            <a href="#"
+                              ><i class="bx bxl-facebook" undefined></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-instagram"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-twitter"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="bx bxl-linkedin"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--================================= footer section layout   ==========================================-->
+
+    <footer class="footer">
+      <div class="footer_bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="newsletter">
+                <h4>Newsletter Subcribe</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Perferendis aspernatur ut at quae omnis pariatur obcaecati
+                  possimus nisi ea iste!
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 mt-5 mt-md-0">
+              <form action="">
+                <div class="form-group">
+                  <input type="text" placeholder="enter email" />
+                  <button type="submit"><i class="bx bx-send"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright text-center py-4">
+        <p>
+          Copyright ©<span id="year"></span> All rights reserved | This template
+          is made with by bootstrap
+        </p>
+      </div>
+    </footer>
+
+    <!--================================= VENDOR JS FILE SETUP   ==========================================-->
+
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script> -->
+    <!--================================= MAIN JS FILE SETUP   ==========================================-->
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

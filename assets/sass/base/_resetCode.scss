@@ -13,7 +13,7 @@ ul {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: $nunita;
 }
 
 ul li {
@@ -58,8 +58,9 @@ p {
 }
 
 .subtitle {
-  @include textStyle($font-20, $main_color, 700, 3px);
+  @include textStyle($font-24, $main_color, 700, 3px);
   text-transform: uppercase;
+  line-height: 150%;
 }
 
 section {
@@ -116,5 +117,18 @@ input {
   }
   &:hover i {
     transform: translateX(3px);
+  }
+}
+
+// swiper-pagination ========>
+
+.swiper-pagination {
+  // margin-top: 110px;
+  .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+    &.swiper-pagination-bullet-active {
+      background-color: $main_color !important;
+    }
   }
 }
