@@ -109,4 +109,48 @@
       }
     }
   }
+  .person_details {
+    .modal {
+      .modal-content {
+        max-width: 500px;
+        height: 490px;
+        overflow: auto;
+        border: none;
+        .modal-header {
+          border-bottom: none;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 11;
+          button {
+            box-shadow: none;
+            i {
+              @include textStyle($font-28, $white, 400, 0);
+            }
+          }
+        }
+        .modal-body {
+          padding: 0;
+
+          p {
+            @include textStyle($font-14, $fade_dark, 400, 1px);
+            margin-bottom: 14px;
+          }
+          .name {
+            h6 {
+              @include textStyle($font-18, $main_color, 600, 2px);
+              text-transform: uppercase;
+              font-family: $fira_code;
+            }
+            .position {
+              text-transform: capitalize;
+            }
+          }
+          .details {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
 }
