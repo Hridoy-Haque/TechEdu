@@ -735,6 +735,13 @@
     .person_details {
       .modal {
         .modal-content {
+          .modal-header {
+            button {
+              i {
+                color: $white !important;
+              }
+            }
+          }
           .modal-body {
             .person-img {
               img {

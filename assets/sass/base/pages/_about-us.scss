@@ -125,7 +125,7 @@
           button {
             box-shadow: none;
             i {
-              @include textStyle($font-28, $white, 400, 0);
+              @include textStyle($font-28, $black_color, 400, 0);
             }
           }
         }
