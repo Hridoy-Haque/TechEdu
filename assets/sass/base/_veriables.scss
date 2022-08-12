@@ -38,4 +38,13 @@ $Source_sans: "Source Sans Pro", sans-serif;
 $about-us: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 
 //course
+
 $course: #1e0253;
+
+//blog
+
+$blog_bg: radial-gradient(
+  circle farthest-corner at 10% 20%,
+  rgba(234, 249, 249, 0.67) 0.1%,
+  rgba(239, 249, 251, 0.63) 90.1%
+);

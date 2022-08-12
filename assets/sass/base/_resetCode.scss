@@ -133,6 +133,25 @@ input {
   }
 }
 
+// writer-pagination ========>
+
+.writer {
+  @include displayContent(inline-flex, center, center);
+  margin: 0;
+  .writer_ditails {
+    h5 {
+      @include textStyle($normal-size, $black_color, 600, 1px);
+      font-family: $fira_code;
+    }
+    h6 {
+      @include textStyle($font-14, $fade_dark, 400, 1px);
+      a {
+        color: $main_color;
+      }
+    }
+  }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   // background-color: red;

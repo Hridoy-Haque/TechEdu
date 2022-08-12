@@ -86,6 +86,7 @@
           margin-bottom: 0;
         }
         p {
+          text-transform: capitalize;
           @include textStyle($font-14, $fade_dark, 400, 1px);
         }
         ul {

@@ -241,19 +241,6 @@
         background-color: $rgba_bg;
       }
     }
-    .writer {
-      @include displayContent(inline-flex, center, center);
-      margin: 0;
-      margin-top: 30px;
-      .writer_ditails {
-        h5 {
-          @include textStyle($normal-size, $dark_color, 400, 1px);
-        }
-        h6 {
-          @include textStyle($font-14, $fade_dark, 400, 1px);
-        }
-      }
-    }
   }
 }
 
