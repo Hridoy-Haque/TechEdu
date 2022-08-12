@@ -98,5 +98,42 @@ window.addEventListener('load',()=>{
             },
           });
 
+
+        // course price section
+        var comunity = new Swiper(".pricing", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+              },
+            breakpoints: {  
+
+                '600': {
+                  slidesPerView: 2,
+                  spaceBetween: 30, },
+                '991': {
+                  slidesPerView: 3,
+                  spaceBetween: 30, },
+            },
+          });
+
+          const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+        
+
 })
 

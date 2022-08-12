@@ -16,6 +16,10 @@
     />
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css" />
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+    />
     <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
@@ -166,7 +170,7 @@
 
               <li class="nav-item" role="presentation">
                 <button
-                  class="nav-link active"
+                  class="nav-link"
                   id="pills-home-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#web_design"
@@ -183,7 +187,7 @@
 
               <li class="nav-item" role="presentation">
                 <button
-                  class="nav-link"
+                  class="nav-link active"
                   id="pills-profile-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#fullStack_dev"
@@ -240,7 +244,7 @@
             <!-- web design  -->
 
             <div
-              class="tab-pane fade show active"
+              class="tab-pane fade show"
               id="web_design"
               role="tabpanel"
               aria-labelledby="pills-home-tab"
@@ -331,7 +335,7 @@
             <!-- Full stack development  -->
 
             <div
-              class="tab-pane fade show"
+              class="tab-pane fade show active"
               id="fullStack_dev"
               role="tabpanel"
               aria-labelledby="pills-home-tab"
@@ -795,16 +799,243 @@
         </div>
       </section>
 
-      <!--============================ courses supports layout  ============================-->
+      <!--============================ courses price layout  ============================-->
 
-      <!-- <section class="video_content">
+      <section class="course_price">
         <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <h2 class="title">course prices</h2>
+            </div>
+          </div>
           <div class="row">
-            <div class="col-md-7"></div>
-            <div class="col-md-5"></div>
+            <div class="col-12">
+              <div class="swiper pricing">
+                <div class="swiper-wrapper">
+                  <!-- front end development  -->
+
+                  <div class="swiper-slide">
+                    <div class="single_pricing">
+                      <div class="price">
+                        <h2>font-end development</h2>
+                        <h3><span>$</span>17.88</h3>
+                        <h4>3 month</h4>
+                      </div>
+                      <div class="course_details">
+                        <p>html 5</p>
+                        <p>css 3</p>
+                        <p>bootsrap 5</p>
+                        <p>advance javascript</p>
+                      </div>
+                      <div>
+                        <a href="#" class="cmn_btn">purchase now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- backend end development  -->
+
+                  <div class="swiper-slide">
+                    <div class="single_pricing">
+                      <div class="price">
+                        <h2>back-end development</h2>
+                        <h3><span>$</span>23.14</h3>
+                        <h4>4 month</h4>
+                      </div>
+                      <div class="course_details">
+                        <p>php</p>
+                        <p>laravel</p>
+                        <p>mySql</p>
+                        <p>APIs</p>
+                      </div>
+                      <div>
+                        <a href="#" class="cmn_btn">purchase now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- fullstack development  -->
+
+                  <div class="swiper-slide">
+                    <div class="single_pricing">
+                      <div class="price">
+                        <h2>fullstack development</h2>
+                        <h3><span>$</span>73.86</h3>
+                        <h4>7 month</h4>
+                      </div>
+                      <div
+                        class="course_details"
+                        style="justify-content: flex-start"
+                      >
+                        <p>html 5</p>
+                        <p>css 3</p>
+                        <p>bootsrap 5</p>
+                        <p>advance javascript</p>
+                        <p>React js</p>
+                        <p>MySQL</p>
+                        <p>Php</p>
+                        <p>WordPress</p>
+                      </div>
+                      <div>
+                        <a href="#" class="cmn_btn">purchase now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- software development  -->
+
+                  <div class="swiper-slide">
+                    <div class="single_pricing">
+                      <div class="price">
+                        <h2>software development</h2>
+                        <h3><span>$</span>79.86</h3>
+                        <h4>6 month</h4>
+                      </div>
+                      <div class="course_details">
+                        <p>java</p>
+                        <p>data structure & algorithm</p>
+                        <p>testing & debugging</p>
+                      </div>
+                      <div>
+                        <a href="#" class="cmn_btn">purchase now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- motion graphics design  -->
+
+                  <div class="swiper-slide">
+                    <div class="single_pricing">
+                      <div class="price">
+                        <h2>motion graphics design</h2>
+                        <h3><span>$</span>29.56</h3>
+                        <h4>6 month</h4>
+                      </div>
+                      <div class="course_details">
+                        <p>powerpoint</p>
+                        <p>photoshop</p>
+                        <p>illustrator</p>
+                        <p>after effect</p>
+                        <p>primier pro</p>
+                      </div>
+                      <div>
+                        <a href="#" class="cmn_btn">purchase now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- video editing   -->
+
+                  <div class="swiper-slide">
+                    <div class="single_pricing">
+                      <div class="price">
+                        <h2>video editingn</h2>
+                        <h3><span>$</span>37.56</h3>
+                        <h4>6 month</h4>
+                      </div>
+                      <div class="course_details">
+                        <p>Adobe premiere pro</p>
+                        <p>Corel video studio</p>
+                        <p>Cinelerra</p>
+                        <p>iMovie</p>
+                      </div>
+                      <div>
+                        <a href="#" class="cmn_btn">purchase now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- mern stack development  -->
+
+                  <div class="swiper-slide">
+                    <div class="single_pricing">
+                      <div class="price">
+                        <h2>mern stack development</h2>
+                        <h3><span>$</span>67.56</h3>
+                        <h4>6 month</h4>
+                      </div>
+                      <div class="course_details">
+                        <p>MongoDB</p>
+                        <p>Express</p>
+                        <p>React</p>
+                        <p>Node</p>
+                      </div>
+                      <div>
+                        <a href="#" class="cmn_btn">purchase now</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- mern stack development  -->
+
+                  <div class="swiper-slide">
+                    <div class="single_pricing">
+                      <div class="price">
+                        <h2>mern stack development</h2>
+                        <h3><span>$</span>67.56</h3>
+                        <h4>6 month</h4>
+                      </div>
+                      <div class="course_details">
+                        <p>MongoDB</p>
+                        <p>Express</p>
+                        <p>React</p>
+                        <p>Node</p>
+                      </div>
+                      <div>
+                        <a href="#" class="cmn_btn">purchase now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next">
+                  <i
+                    class="bx bx-arrow-back"
+                    style="transform: rotate(180deg)"
+                  ></i>
+                </div>
+                <div class="swiper-button-prev">
+                  <i class="bx bx-arrow-back"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section> -->
+      </section>
+
+      <!-- course related video  -->
+      <section class="course_video">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-md-6 col-lg-5">
+              <div class="course_content common">
+                <h2 class="subtitle">How to enroll ?</h2>
+                <p>
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                  Separated they live in Bookmarksgrove right at the coast
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mt-4 mt-md-0">
+              <div class="video_content">
+                <div class="video_img">
+                  <img
+                    src="assets/img/enrollment.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <a
+                  href="https://youtu.be/8TKPWg9pp-k"
+                  class="play_btn glightbox"
+                >
+                  <i class="bx bx-play"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--================================= footer section layout   ==========================================-->
@@ -849,6 +1080,8 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
     <!-- <script
         src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
         integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="

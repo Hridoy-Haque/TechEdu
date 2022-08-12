@@ -132,3 +132,21 @@ input {
     }
   }
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  // background-color: red;
+}
+
+::-webkit-scrollbar-track {
+  background: $rgba_bg;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: $main_color;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $nevy_color;
+}

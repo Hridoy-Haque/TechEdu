@@ -2,6 +2,8 @@
 @import "../veriables";
 @import "../veriables";
 
+// course support ==============>
+
 .course_support {
   .support_content {
     margin-top: 40px !important;
@@ -33,6 +35,169 @@
         }
         p {
           @include textStyle($font-14, $fade_dark, 400, 0);
+        }
+      }
+    }
+  }
+}
+
+// course support ==============>
+
+.course_price {
+  .swiper {
+    padding: 30px 20px;
+    margin-top: 40px;
+    .swiper-wrapper {
+      .swiper-slide {
+        display: inline-flex;
+        justify-content: center;
+
+        .single_pricing {
+          padding-bottom: 20px;
+          width: 300px !important;
+          height: 500px;
+          box-shadow: 0 0 15px $rgba_bg;
+          text-align: center;
+          border-radius: 10px;
+          overflow: hidden;
+          transition: 0.4s all ease-in-out;
+          .price {
+            padding-top: 30px;
+            background-color: $rgba_bg;
+            height: 220px;
+            overflow: hidden;
+            clip-path: circle(62.6% at 50% 25%);
+
+            h2 {
+              @include textStyle($font-14, $main_color, 600, 2px);
+              text-transform: capitalize;
+            }
+            h3 {
+              position: relative;
+              @include textStyle($font-38, $main_color, 600, 2px);
+              font-family: $fira_code;
+              display: inline-block;
+              margin: 15px 0;
+              span {
+                font-size: $font-14;
+                position: absolute;
+                left: -15px;
+                top: 0;
+              }
+            }
+            h4 {
+              @include textStyle($font-14, $main_color, 600, 2px);
+            }
+          }
+          .course_details {
+            height: 160px;
+            @include displayContent(flex, center, center);
+            flex-direction: column;
+            overflow: auto;
+            margin: 30px 0;
+            p {
+              text-transform: capitalize;
+              @include textStyle($font-14, $fade_dark, 400, 2px);
+              margin: 5px 0;
+            }
+          }
+          .cmn_btn {
+            padding: 10px 24px;
+            border-radius: 40px;
+          }
+        }
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 30px;
+      left: 80px;
+      color: $main_color;
+      &::after {
+        content: "";
+      }
+      i {
+        font-size: $font-24;
+      }
+    }
+    .swiper-button-next {
+      top: 28px;
+      left: 130px;
+    }
+  }
+}
+
+// course video ==============>
+
+.course_video {
+  .video_content {
+    position: relative;
+    .video_img {
+      display: block;
+      position: relative;
+      img {
+        border-radius: 5px;
+      }
+      &::after {
+        @include positions(0, 0, 0, 0);
+        content: "";
+        background-color: $rgba_bg;
+      }
+    }
+    .play_btn {
+      @include displayContent(inline-flex, center, center);
+      @include positions(50%, 50%, auto, auto);
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      background-image: linear-gradient(
+        83.2deg,
+        rgba(150, 93, 233, 1) 10.8%,
+        rgba(99, 88, 238, 1) 94.3%
+      );
+
+      border: 7px solid rgba(243, 253, 255, 0.7);
+      border-radius: 50%;
+      animation: playBtn 1s ease-in-out infinite;
+      i {
+        @include textStyle($font-48, $white, 400, 0);
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+@keyframes playBtn {
+  0% {
+    border-color: rgba(243, 253, 255, 0.7);
+  }
+  50% {
+    border-color: rgba(232, 208, 255, 0.7);
+  }
+  100% {
+    border-color: rgba(243, 253, 255, 0.7);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .course_price {
+    .swiper {
+      padding: 70px 20px;
+      .swiper-wrapper {
+        .swiper-slide {
+          &.swiper-slide-next {
+            .single_pricing {
+              transform: scale(1.1);
+              .price {
+                background-color: $main_color;
+                h2,
+                h3,
+                h4 {
+                  color: $white !important;
+                }
+              }
+            }
+          }
         }
       }
     }
