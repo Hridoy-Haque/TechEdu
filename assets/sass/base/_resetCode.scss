@@ -86,14 +86,15 @@ button {
   background-color: transparent;
 }
 
-input {
-  border: 0;
+input,
+textarea {
   outline: 0;
+  padding-left: 15px;
 }
 
-.collapse:not(.show) {
-  display: block;
-}
+// .collapse:not(.show) {
+//   display: block;
+// }
 
 .menu_btn {
   line-height: inherit;
@@ -168,4 +169,12 @@ input {
 
 ::-webkit-scrollbar-thumb:hover {
   background: $nevy_color;
+}
+
+.breadcrumb {
+  .breadcrumb-item {
+    a {
+      color: $main_color !important;
+    }
+  }
 }

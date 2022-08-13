@@ -1,6 +1,6 @@
 @import "../mixins";
 @import "../veriables";
-@import "../veriables";
+@import "../resetCode";
 
 //blog hero content ===========>
 
@@ -76,9 +76,11 @@
       }
     }
   }
+}
 
-  //recent posts ===:>
+//blog posts content ===:>
 
+.blog_posts-content {
   .recent_posts {
     .recent_title {
       @include textStyle($font-20, $black_color, 600, 2px);
@@ -190,6 +192,161 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+//single blog content ===:>
+
+.single_blog {
+  @include textStyle($font-14, $fade_dark, 400, 1px);
+  a {
+    color: $fade_dark;
+    transition: 0.3s ease;
+    &:hover {
+      color: $main_color;
+    }
+  }
+
+  //single blog content ========>
+
+  .single_blog-content {
+    box-shadow: 0 0 10px $rgba_bg;
+
+    .blog_text {
+      padding: 30px;
+      h3 {
+        a {
+          @include textStyle($font-20, $black_color, 600, 1px);
+          &:hover {
+            color: $main_color !important;
+          }
+        }
+      }
+      ul,
+      ul > li {
+        @include displayContent(inline-flex, center, center);
+      }
+      ul {
+        margin: 15px 0;
+        column-gap: 10px;
+        li {
+          column-gap: 4px;
+        }
+      }
+      blockquote {
+        background-color: $rgba_bg;
+        padding: 20px 30px;
+        border-radius: 6px;
+        margin: 20px 0;
+        p {
+          @include textStyle($font-18, $nevy_color, 400, 1px);
+          font-family: $fira_code;
+          i {
+            transform: translateY(-4px);
+          }
+        }
+      }
+      h4 {
+        @include textStyle($font-20, $black_color, 600, 2px);
+      }
+
+      .blog_social {
+        a {
+          display: inline-block;
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+
+  //blog comment section ========>
+
+  .comment_box {
+    h2 {
+      margin: 40px 0;
+      @include textStyle($font-20, $black_color, 600, 2px);
+      border-bottom: 1px dashed $main_color;
+      padding-bottom: 10px;
+    }
+
+    .single_comment {
+      overflow: hidden;
+      margin-top: 30px;
+      .wrapper {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        justify-content: center;
+        align-items: flex-start;
+        column-gap: 20px;
+        .avatar {
+          img {
+            max-width: 60px;
+            max-height: auto;
+            border-radius: 50%;
+          }
+        }
+        .comment_content {
+          .box {
+            h4 {
+              @include textStyle($font-14, $black_color, 600, 2px);
+              text-transform: uppercase;
+              margin-top: 4px;
+            }
+            p {
+              margin-top: 10px;
+              max-height: 90px;
+              overflow: auto;
+            }
+          }
+          .reactions {
+            text-align: right;
+            ul {
+              @include displayContent(inline-flex, center, center);
+              column-gap: 10px;
+              li {
+                a {
+                  @include displayContent(inline-flex, center, center);
+                  column-gap: 4px;
+                  &.react {
+                    color: $main_color !important;
+                  }
+                }
+              }
+            }
+          }
+          .reply_box {
+            transition: height 0.6s all ease-in-out;
+            form {
+              margin-top: 15px;
+              position: relative;
+              input {
+                border: 1px solid $main_color;
+                width: 95%;
+                height: 40px;
+                border-radius: 50px;
+                padding-left: 15px;
+                color: $fade_dark;
+              }
+              button {
+                width: 80px;
+                height: 33px;
+                border-radius: 50px;
+                background-color: $main_color;
+                @include positions(50%, auto, 0, auto);
+                transform: translateY(-50%);
+                i {
+                  color: $white;
+                  font-size: $font-20;
+                }
+              }
+            }
+          }
+        }
+      }
+      .single_comment {
+        margin-left: 80px;
       }
     }
   }

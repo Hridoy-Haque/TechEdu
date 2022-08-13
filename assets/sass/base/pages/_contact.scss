@@ -1,3 +1,40 @@
 @import "../mixins";
 @import "../veriables";
-@import "../veriables";
+@import "../resetCode";
+
+// contact_us hero  ========>
+.contact_us-hero {
+  padding: 120px 0;
+  background-image: $contact;
+}
+
+.contact_content {
+  h2 {
+    @include textStyle($font-24, $black_color, 600, 1px);
+    text-transform: capitalize;
+  }
+  .main_form {
+    box-shadow: 0 0 10px $rgba_bg;
+    padding: 20px;
+    margin-top: 15px;
+    .col-12 {
+      padding: 0;
+    }
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid $fade_dark;
+      margin: 10px 0;
+      &:focus {
+        border-color: $main_color;
+      }
+    }
+    input {
+      height: 50px;
+    }
+    textarea {
+      height: 120px;
+      padding-top: 10px;
+    }
+  }
+}

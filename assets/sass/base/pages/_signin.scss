@@ -1,3 +1,138 @@
 @import "../mixins";
 @import "../veriables";
-@import "../veriables";
+@import "../resetCode";
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    106.1deg,
+    rgba(69, 242, 143, 0.52) 10.2%,
+    rgba(14, 228, 175, 0.61) 83.6%
+  );
+  @include displayContent(flex, center, center);
+  // flex-direction: column;
+  .page_route {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    margin: 40px;
+  }
+
+  //sign in form  ========>
+
+  .sign_in-form {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    color: $black_color;
+
+    // sign in titles ======>
+
+    h4 {
+      @include textStyle($font-24, $main_color, 700, 2px);
+    }
+    p {
+      @include textStyle($font-14, $black_color, 400, 1px);
+    }
+
+    // main form ======>
+
+    .main_form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      border-radius: 15px;
+      box-shadow: 0 0 10px $rgba_black;
+      overflow: hidden;
+
+      // sign in form ======>
+
+      .sign_form {
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 40px 30px;
+
+        //form ====>
+
+        form {
+          margin-top: 40px;
+
+          a {
+            color: $main_color;
+          }
+
+          //form group ====>
+
+          .form-group {
+            label {
+              margin: 0 6px 4px;
+              @include textStyle($normal-size, $black_color, 600, 1px);
+            }
+            input {
+              height: 45px;
+              box-shadow: none;
+              background-color: rgba(255, 255, 255, 0.6);
+              border: 0;
+              &[type="checkbox"] {
+                height: auto;
+              }
+            }
+          }
+
+          .check {
+            @include textStyle($font-14, $black_color, 500, 1px);
+          }
+
+          //sign in buttons ====>
+
+          .sign_btn {
+            width: 100%;
+            background-color: $main_color;
+            padding: 10px 0;
+            @include displayContent(inline-flex, center, center);
+            column-gap: 5px;
+            border-radius: 50px;
+            color: $white;
+            &.goggle {
+              background-color: $white;
+              color: $black_color;
+            }
+          }
+        }
+      }
+
+      // sign in form img ======>
+
+      .sign_img {
+        height: 100%;
+        @include displayContent(flex, center, center);
+        flex-direction: column;
+        background-color: rgba(192, 253, 222, 0.4);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main_form {
+    grid-template-columns: 1fr !important;
+    .sign_img {
+      display: none !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .sign_form {
+    form {
+      margin-top: 20px !important;
+      .form-group {
+        input {
+          height: 37px !important;
+          font-size: $font-14;
+        }
+      }
+    }
+  }
+}

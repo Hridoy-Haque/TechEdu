@@ -138,7 +138,36 @@ window.addEventListener('load',()=>{
           });
         }
         
+
+        //blog page ==============>
         
+
+        //comment section ==========>
+
+        //reaction ==========>
+
+        const likes = document.querySelectorAll('.like');
+        const replies = document.querySelectorAll('.reply');
+
+        function reaction(e){
+          e.preventDefault();
+          this.classList.toggle('react')
+        }
+
+        //like ==========>
+
+        likes.forEach((like)=>{
+          like.addEventListener('click',reaction)
+        })
+        
+        //reply ==========>
+
+        replies.forEach((reply)=>{
+          reply.addEventListener('click',reaction)
+        })
+
+
+
 
 })
 
