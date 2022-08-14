@@ -103,17 +103,6 @@
             grid-template-columns: 1fr 1fr;
             column-gap: 20px;
             align-items: center;
-            button {
-              background-color: $main_color;
-              padding: 10px 0;
-              border-radius: 30px;
-              column-gap: 6px;
-              color: $white;
-              &.google {
-                background-color: $white;
-                color: $black_color;
-              }
-            }
           }
 
           // account ======>

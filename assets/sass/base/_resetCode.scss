@@ -130,6 +130,28 @@ textarea {
   }
 }
 
+.sign_btn {
+  width: 100%;
+  background-color: $main_color;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+  @include displayContent(inline-flex, center, center);
+  column-gap: 5px;
+  border-radius: 50px;
+  color: $white;
+  transition: 0.4s;
+  &.google {
+    background-color: $white !important;
+    color: $black_color !important;
+  }
+  &:hover {
+    box-shadow: 0 0 20px $main_color;
+  }
+  &.google:hover {
+    box-shadow: 0 0 30px rgb(255, 255, 253);
+  }
+}
 // swiper-pagination ========>
 
 .swiper-pagination {

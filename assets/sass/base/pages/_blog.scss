@@ -224,17 +224,21 @@
           }
         }
       }
-      ul,
-      ul > li {
-        @include displayContent(inline-flex, center, center);
-      }
       ul {
-        margin: 15px 0;
-        column-gap: 10px;
         li {
-          column-gap: 4px;
+          display: inline-flex;
+          align-items: center;
+          column-gap: 3px;
+          margin-right: 6px;
         }
       }
+      // ul {
+      //   margin: 15px 0;
+      //   column-gap: 10px;
+      //   li {
+      //     column-gap: 4px;
+      //   }
+      // }
       blockquote {
         background-color: $rgba_bg;
         padding: 20px 30px;
@@ -372,6 +376,49 @@
       }
     }
   }
+
+  //blog comment section ========>
+  .single_blog {
+    .comment_box {
+      h2 {
+        font-size: $font-18 !important;
+      }
+
+      .single_comment {
+        .wrapper {
+          column-gap: 20px;
+          .avatar {
+            img {
+              max-width: 40px;
+            }
+          }
+          .comment_content {
+            .box {
+              h4 {
+                font-size: $font-12 !important;
+              }
+              p {
+                font-size: $font-12;
+              }
+            }
+            .reactions {
+              margin-top: 8px;
+              ul {
+                li {
+                  a {
+                    font-size: $font-12;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .single_comment {
+          margin-left: 55px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 575px) {
@@ -406,6 +453,26 @@
           a {
             margin: 12px 0;
             font-size: $font-14 !important;
+          }
+        }
+      }
+    }
+  }
+
+  //blog comment section ========>
+  .single_blog {
+    .comment_box {
+      h2 {
+        font-size: $font-18 !important;
+      }
+
+      .single_comment {
+        .wrapper {
+          column-gap: 20px;
+          .avatar {
+            img {
+              max-width: 30px;
+            }
           }
         }
       }
