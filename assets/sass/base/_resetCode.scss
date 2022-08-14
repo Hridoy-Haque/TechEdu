@@ -63,6 +63,10 @@ p {
   line-height: 150%;
 }
 
+.py-120 {
+  padding: 120px 0;
+}
+
 section {
   position: relative;
   overflow: hidden !important;
@@ -108,8 +112,8 @@ textarea {
 
 .cmn_btn {
   @include displayContent(inline-flex, center, center);
-  @include textStyle($font-14, $white, 400, 2px);
-  padding: 14px 40px;
+  @include textStyle($font-14, $white, 400, 0);
+  padding: 14px 34px;
   background-color: $main_color;
   border-radius: 3px;
   transition: 0.3s;
@@ -180,6 +184,27 @@ textarea {
   .breadcrumb-item {
     a {
       color: $main_color !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .py-120 {
+    padding: 90px 0;
+  }
+  //writer ========>
+
+  .writer {
+    .writer_img {
+      img {
+        width: 80%;
+      }
+    }
+    .writer_ditails {
+      h5 {
+        margin-bottom: 5px;
+        font-size: $font-14 !important;
+      }
     }
   }
 }

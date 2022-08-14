@@ -41,7 +41,7 @@
   }
 }
 
-// course support ==============>
+// course price ==============>
 
 .course_price {
   .swiper {
@@ -110,7 +110,7 @@
     }
     .swiper-button-next,
     .swiper-button-prev {
-      top: 30px;
+      top: 12px;
       left: 80px;
       color: $main_color;
       &::after {
@@ -121,7 +121,7 @@
       }
     }
     .swiper-button-next {
-      top: 28px;
+      top: 10px;
       left: 130px;
     }
   }
@@ -180,6 +180,8 @@
 }
 
 @media only screen and (min-width: 992px) {
+  // course price ==============>
+
   .course_price {
     .swiper {
       padding: 70px 20px;
@@ -199,6 +201,41 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  // course support ==============>
+
+  .course_support {
+    .support_content {
+      .single_content {
+        padding: 20px 30px;
+        .content_img {
+          i {
+            font-size: $font-38;
+          }
+        }
+        .content_text {
+          h3 {
+            @include textStyle($normal-size, $black_color, 600, 1px);
+          }
+        }
+      }
+    }
+  }
+
+  // course price ==============>
+
+  .course_price {
+    .swiper {
+      .swiper-button-prev {
+        left: 30px;
+      }
+      .swiper-button-next {
+        left: 70px;
       }
     }
   }

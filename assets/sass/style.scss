@@ -729,31 +729,4 @@
   }
 
   //course details content ==========>
-  // about us community ===============>
-
-  .about_us-community {
-    .person_details {
-      .modal {
-        .modal-content {
-          .modal-header {
-            button {
-              i {
-                color: $white !important;
-              }
-            }
-          }
-          .modal-body {
-            .person-img {
-              img {
-                width: 100%;
-                height: 320px;
-                object-fit: cover;
-                background-position: center;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
