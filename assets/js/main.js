@@ -13,8 +13,11 @@ window.addEventListener('load',()=>{
         nav_menu.classList.remove('show_collapse')
     }
 
-    show_btn.addEventListener('click',showMenu)
-    close_btn.addEventListener('click',hideMenu)
+    if(show_btn){
+      show_btn.addEventListener('click',showMenu)
+      close_btn.addEventListener('click',hideMenu)
+    }
+
 
     // working on dropdown menu
 
@@ -64,7 +67,11 @@ window.addEventListener('load',()=>{
         // copyright year ========>
         let date = new Date();
         let year = date.getFullYear();
-        document.getElementById('year').innerHTML = year
+        let yearEl = document.getElementById('year');
+        if(yearEl){
+          yearEl.innerHTML = year
+        }
+        
 
 
         // comunity slider

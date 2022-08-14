@@ -3,16 +3,166 @@
 @import "../resetCode";
 
 .signup {
-  background-image: linear-gradient(
-    108.1deg,
-    rgba(167, 220, 225, 1) 11.2%,
-    rgba(217, 239, 242, 1) 88.9%
+  background-image: radial-gradient(
+    circle 997px at 99.9% 96.8%,
+    rgba(137, 248, 255, 1) 10%,
+    rgba(132, 255, 199, 1) 90%
   );
   .sign_up-form {
     width: 100%;
+
+    // main_form ======>
+
     .main_form {
+      box-shadow: 0 0 15px $rgba_black;
       display: grid;
       grid-template-columns: max-content 1fr;
+      border-radius: 15px;
+      overflow: hidden;
+
+      // sign_img ======>
+
+      .sign_img {
+        background-color: rgba(170, 255, 224, 0.2);
+
+        padding: 20px;
+      }
+
+      // sign_form ======>
+
+      .sign_form {
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        h4 {
+          @include textStyle($font-24, $main_color, 700, 1px);
+        }
+
+        // form ======>
+
+        form {
+          margin-top: 20px;
+          input[type="text"],
+          input[type="email"],
+          input[type="number"],
+          select {
+            box-shadow: none;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 0;
+            margin: 10px 0;
+            height: 45px;
+          }
+
+          // gender ======>
+
+          .gender {
+            @include displayContent(inline-flex, flex-start, center);
+            label {
+              text-transform: capitalize;
+              margin: 0 5px;
+            }
+          }
+
+          // or ======>
+
+          .or {
+            text-align: center;
+            margin: 13px 0;
+            span {
+              display: block;
+              position: relative;
+              @include textStyle($font-18, $black_color, 400, 0);
+              &::before {
+                @include positions(14px, 0, auto, auto);
+                content: "";
+                width: 46%;
+                height: 1px;
+                background-color: $black_color;
+              }
+              &::after {
+                @include positions(14px, auto, 0, auto);
+                content: "";
+                width: 46%;
+                height: 1px;
+                background-color: $black_color;
+              }
+            }
+          }
+
+          // signup_btn ======>
+
+          .signup_btn {
+            margin-top: 25px;
+            button {
+              padding: 10px 30px;
+              font-size: $normal-size !important;
+              letter-spacing: 0;
+            }
+          }
+
+          // buttons ======>
+
+          .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            align-items: center;
+            button {
+              background-color: $main_color;
+              padding: 10px 0;
+              border-radius: 30px;
+              column-gap: 6px;
+              color: $white;
+              &.google {
+                background-color: $white;
+                color: $black_color;
+              }
+            }
+          }
+
+          // account ======>
+
+          .account {
+            margin-top: 20px;
+            p {
+              @include textStyle($font-14, $black_color, 400, 1px);
+              text-align: center;
+              a {
+                color: $main_color !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .sign_up-form {
+    .main_form {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .sign_form {
+    form {
+      margin-top: 20px !important;
+      input,
+      select {
+        height: 37px !important;
+        font-size: $font-14;
+      }
+      .buttons {
+        button {
+          font-size: $font-14;
+        }
+      }
+      label {
+        font-size: $font-14;
+      }
     }
   }
 }

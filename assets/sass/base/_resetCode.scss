@@ -111,10 +111,15 @@ textarea {
   @include textStyle($font-14, $white, 400, 2px);
   padding: 14px 40px;
   background-color: $main_color;
-  border-radius: 2px;
+  border-radius: 3px;
+  transition: 0.3s;
+
   i {
     transition: transform 0.3s;
     margin-left: 3px;
+  }
+  &:hover {
+    background-color: $nevy_color;
   }
   &:hover i {
     transform: translateX(3px);

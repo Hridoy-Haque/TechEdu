@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="wrapper signup">
+    <div class="sign_wrapper signup">
       <!-- page route  -->
 
       <div class="page_route">
@@ -45,45 +45,51 @@
       <div class="sign_up-form">
         <div class="container">
           <div class="main_form">
-            <div class="sign_img">
-              <div class="signin_img">
-                <h3>welcome to tech edu</h3>
-                <h4>some clicks away from creating your account</h4>
+            <!-- sign up img  -->
 
-                <!-- sign up requirments  -->
-                <h5>sign up requirments</h5>
-                <ul>
-                  <li><i class="bx bx-check"></i><span>orginal data</span></li>
-                  <li>
-                    <i class="bx bx-check"></i><span>fill the all boxes</span>
-                  </li>
-                  <li>
-                    <i class="bx bx-check"></i><span>self discipline</span>
-                  </li>
-                </ul>
+            <div class="sign_img">
+              <div class="signup_img">
+                <img src="assets/img/signup.png" class="img-fluid" alt="" />
               </div>
             </div>
+
+            <!-- sign up content  -->
+
             <div class="sign_form">
-              <h4>sign in</h4>
-              <p>welcome back ! please enter your details</p>
+              <h4>sign up</h4>
               <form action="">
                 <div class="row">
                   <!-- name  -->
 
                   <div class="col-12 col-md-6">
-                    <input type="text" placeholder="your name" required />
+                    <input
+                      type="text"
+                      placeholder="your name"
+                      class="form-control"
+                      required
+                    />
                   </div>
 
                   <!-- user id name  -->
 
                   <div class="col-12 col-md-6">
-                    <input type="text" placeholder="user id name" required />
+                    <input
+                      type="text"
+                      placeholder="user id name"
+                      class="form-control"
+                      required
+                    />
                   </div>
 
                   <!-- user id name  -->
 
                   <div class="col-12 col-md-6">
-                    <input type="email" placeholder=" your emial" required />
+                    <input
+                      type="email"
+                      placeholder="your emial"
+                      class="form-control"
+                      required
+                    />
                   </div>
 
                   <!-- user id name  -->
@@ -92,6 +98,7 @@
                     <input
                       type="number"
                       placeholder="your mobile number"
+                      class="form-control"
                       required
                     />
                   </div>
@@ -99,22 +106,39 @@
                   <!-- user password  -->
 
                   <div class="col-12">
-                    <input type="text" placeholder="password" required />
+                    <input
+                      type="text"
+                      placeholder="password"
+                      class="form-control"
+                      required
+                    />
                   </div>
 
                   <!-- gender  -->
 
-                  <div class="col-12">
-                    <input id="male" type="radio" name="gender" required />
+                  <div class="col-12 gender mt-1">
+                    <input
+                      id="male"
+                      type="radio"
+                      name="gender"
+                      checked
+                      required
+                    />
                     <label for="male">male</label>
-                    <input id="female" type="radio" name="gender" required />
+                    <input
+                      id="female"
+                      class="ms-2"
+                      type="radio"
+                      name="gender"
+                      required
+                    />
                     <label for="female">female</label>
                   </div>
 
                   <!-- country selection  -->
 
                   <div class="col-12">
-                    <select name="" id="">
+                    <select name="" id="" class="form-control">
                       <option value="" selected>select your country</option>
                       <option value="bangladesh">Bangladesh</option>
                       <option value="bangladesh">Japan</option>
@@ -129,29 +153,43 @@
 
                   <!-- terms and condition  -->
 
-                  <div class="col-12">
+                  <div class="col-12 d-flex align-items-center terms mt-2">
                     <input type="checkbox" id="terms" />
-                    <label for="terms">I agree with terms & condition</label>
+                    <label for="terms" class="ms-2"
+                      >I agree with terms & condition</label
+                    >
                   </div>
 
                   <!-- sign up buttons  -->
+                  <div class="col-12 signup_btn">
+                    <button class="cmn_btn" type="submit">
+                      <span>submit</span>
+                    </button>
+                  </div>
+                  <!-- sign up with another option buttons  -->
 
                   <div class="or"><span>or</span></div>
 
                   <div class="col-12 buttons">
-                    <button type="submit">
+                    <button
+                      class="google d-flex align-items-center justify-content-center"
+                      type="submit"
+                    >
                       <img src="assets/img/google.png" alt="" /><span
                         >google</span
                       >
                     </button>
-                    <button type="submit">
+                    <button
+                      class="d-flex align-items-center justify-content-center"
+                      type="submit"
+                    >
                       <i class="bx bxl-facebook"></i><span>facebook</span>
                     </button>
                   </div>
 
                   <!-- account exist  -->
 
-                  <div class="col-12">
+                  <div class="col-12 account">
                     <p>
                       <span>already an account ?</span>
                       <a href="signin.html">sign in</a>
@@ -160,8 +198,6 @@
                 </div>
               </form>
             </div>
-
-            <!-- sign in img  -->
           </div>
         </div>
       </div>
