@@ -28,6 +28,19 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- page preloader  -->
+
+    <div class="loader_wrapper">
+      <div class="loader">
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__bar"></div>
+        <div class="loader__ball"></div>
+      </div>
+    </div>
+
     <!-- sign up content  -->
 
     <div class="sign_wrapper signup">
@@ -140,17 +153,44 @@
                   <!-- country selection  -->
 
                   <div class="col-12">
-                    <select name="" id="" class="form-control">
-                      <option value="" selected>select your country</option>
-                      <option value="bangladesh">Bangladesh</option>
-                      <option value="bangladesh">Japan</option>
-                      <option value="bangladesh">swizerland</option>
-                      <option value="bangladesh">landon</option>
-                      <option value="bangladesh">USA</option>
-                      <option value="bangladesh">Uk</option>
-                      <option value="bangladesh">italy</option>
-                      <option value="bangladesh">Sidney</option>
-                    </select>
+                    <div class="custom_selection">
+                      <div
+                        class="selected d-flex justify-content-between align-items-center"
+                      >
+                        <h5>select your country</h5>
+                        <i class="bx bx-chevron-down"></i>
+                      </div>
+                      <div class="option_container">
+                        <div class="option">
+                          <input type="radio" id="bd" name="country" />
+                          <label for="bd">bangladesh</label>
+                        </div>
+                        <div class="option">
+                          <input type="radio" id="usa" name="country" />
+                          <label for="usa">usa</label>
+                        </div>
+                        <div class="option">
+                          <input type="radio" id="london" name="country" />
+                          <label for="london">london</label>
+                        </div>
+                        <div class="option">
+                          <input type="radio" id="italy" name="country" />
+                          <label for="italy">italy</label>
+                        </div>
+                        <div class="option">
+                          <input type="radio" id="japan" name="country" />
+                          <label for="japan">japan</label>
+                        </div>
+                        <div class="option">
+                          <input type="radio" id="india" name="country" />
+                          <label for="india">india</label>
+                        </div>
+                        <div class="option">
+                          <input type="radio" id="bolivia" name="country" />
+                          <label for="bolivia">bolivia</label>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <!-- terms and condition  -->

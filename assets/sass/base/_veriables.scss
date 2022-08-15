@@ -25,7 +25,9 @@ $fade_white: #f7f7f7;
 $fade_dark: #979797;
 $blue_light: #f6fdff;
 $red_color: #e45070;
-
+$bar-color: #fff;
+$ball-color: #fff;
+$bg-color: #ea4961;
 //font family
 
 $fira_code: "Fira Code", monospace;
@@ -66,8 +68,22 @@ $contact: linear-gradient(
 
 //sign in
 
+$signin_bg: linear-gradient(
+  106.1deg,
+  rgba(69, 242, 143, 0.52) 10.2%,
+  rgba(14, 228, 175, 0.61) 83.6%
+);
+
+$signin_form: rgba(255, 255, 255, 0.4);
+$input: rgba(255, 255, 255, 0.6);
+
 $rgba_black: rgba(0, 0, 0, 0.1);
 
 //sign up
+
+$signup_bg: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+$signup_img: rgba(170, 255, 224, 0.2);
+$signup_form: rgba(255, 255, 255, 0.3);
+$signin_inputs: rgba(255, 255, 255, 0.5);
 
 $signup_green: #04ff00;

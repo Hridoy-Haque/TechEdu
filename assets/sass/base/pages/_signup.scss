@@ -3,7 +3,7 @@
 @import "../resetCode";
 
 .signup {
-  background-image: linear-gradient(to top, #b3ffab 0%, #12fff7 100%);
+  background-image: $signup_bg;
   .sign_up-form {
     width: 100%;
 
@@ -19,7 +19,7 @@
       // sign_img ======>
 
       .sign_img {
-        background-color: rgba(170, 255, 224, 0.2);
+        background-color: $signup_img;
 
         padding: 20px;
       }
@@ -27,7 +27,7 @@
       // sign_form ======>
 
       .sign_form {
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: $signup_form;
         padding: 20px;
         h4 {
           @include textStyle($font-24, $main_color, 700, 1px);
@@ -39,14 +39,73 @@
           margin-top: 20px;
           input[type="text"],
           input[type="email"],
-          input[type="number"],
-          select {
+          input[type="number"] {
             box-shadow: none;
             border: none;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: $signin_inputs;
             border-radius: 0;
             margin: 10px 0;
             height: 45px;
+          }
+
+          //custom select tag
+
+          .custom_selection {
+            margin: 20px 0;
+            position: relative;
+            .selected {
+              background-color: $signin_inputs;
+              padding: 14px;
+              cursor: pointer;
+              h5 {
+                @include textStyle($normal-size, $black_color, 400, 1px);
+                margin-bottom: 0;
+              }
+              i {
+                font-size: $font-20;
+                transition: 0.4s all;
+              }
+              &.rotate {
+                i {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+            .option_container {
+              position: absolute;
+              top: 60px;
+              left: 0;
+              background-color: $white;
+              width: 100%;
+              z-index: 11;
+              padding: 10px 0;
+              border-radius: 6px;
+              height: 0;
+              opacity: 0;
+              overflow: hidden;
+              transition: 0.4s all ease-in-out;
+              &.active {
+                height: 210px;
+                opacity: 1;
+                overflow-y: scroll;
+              }
+              .option {
+                padding: 8px 30px;
+                transition: 0.3s all;
+                cursor: pointer;
+                input,
+                label {
+                  cursor: pointer;
+                  text-transform: capitalize;
+                }
+                input {
+                  display: none;
+                }
+                &:hover {
+                  background-color: $rgba_bg;
+                }
+              }
+            }
           }
 
           // gender ======>
