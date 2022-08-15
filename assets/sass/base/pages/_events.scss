@@ -1,0 +1,218 @@
+@import "../mixins";
+@import "../veriables";
+@import "../resetCode";
+
+// events hero ============>
+
+.events_hero {
+  background-image: $events;
+}
+
+// events content ============>
+
+.events_content {
+  .course_content-tabs {
+    ul {
+      flex-direction: column;
+      li {
+        margin-bottom: 20px;
+        button {
+          width: 100%;
+          position: relative;
+          @include displayContent(flex, flex-start, flex-start);
+          flex-direction: column;
+          border-radius: 0;
+          padding: 30px 20px;
+          box-shadow: 0 0 20px $rgba_bg;
+          span {
+            @include textStyle($font-28, $black_color, 600, 1px);
+            text-transform: capitalize;
+            transition: 0.4s;
+            text-align: left;
+            &:last-child {
+              font-size: $font-14 !important;
+              font-weight: 400;
+            }
+          }
+          &.active span,
+          &:hover span {
+            color: $white !important;
+          }
+          &:hover,
+          &.active {
+            background-color: $main_color;
+          }
+
+          &.active::before {
+            content: "";
+            @include positions(50%, auto, -6px, auto);
+            transform: translateY(-50%) rotate(45deg);
+            width: 20px;
+            height: 20px;
+            background-color: $main_color;
+          }
+        }
+      }
+    }
+  }
+
+  //tab content
+
+  .tab-content {
+    .event_content {
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px $rgba_bg;
+      padding: 30px;
+      .event_data {
+        .event_img {
+          img {
+            border-radius: 50%;
+          }
+        }
+        .event_details {
+          h2 {
+            @include textStyle($font-14, $fade_dark, 400, 1px);
+          }
+          h3 {
+            a {
+              text-transform: capitalize;
+              @include textStyle($font-28, $black_color, 600, 1px);
+              transition: 0.3s;
+              &:hover {
+                color: $main_color !important;
+              }
+            }
+          }
+          p {
+            color: $fade_dark;
+            margin: 20px 0;
+          }
+          h4 {
+            @include textStyle($font-18, $black_color, 600, 1px);
+            a {
+              color: $main_color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .events_content {
+    .course_content-tabs {
+      ul {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: nowrap;
+        li {
+          margin: 10px 5px;
+          button {
+            padding: 20px;
+            box-shadow: 0 3px 10px $rgba_bg;
+            &.active::before {
+              top: auto;
+              bottom: -6px;
+              left: 50%;
+              transform: translateX(-50%) rotate(45deg);
+            }
+            span {
+              @include textStyle($font-20, $black_color, 600, 1px);
+              &:last-child {
+                font-size: $font-12 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .events_content {
+    .course_content-tabs {
+      ul {
+        li {
+          button {
+            padding: 12px 10px;
+            span {
+              @include textStyle($normal-size, $black_color, 600, 1px);
+              &:last-child {
+                font-size: $font-12 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //tab content
+
+    .tab-content {
+      .event_content {
+        .event_data {
+          .event_img {
+            img {
+              width: 80px;
+            }
+          }
+          .event_details {
+            h3 {
+              a {
+                text-transform: capitalize;
+                font-size: $font-20 !important;
+              }
+            }
+            h4 {
+              font-size: $normal-size !important;
+            }
+            p {
+              font-size: $font-14;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .events_content {
+    .course_content-tabs {
+      ul {
+        flex-wrap: wrap;
+        li {
+          margin-bottom: 20px;
+          button.active::before {
+            content: none;
+          }
+        }
+      }
+    }
+
+    //tab content
+
+    .tab-content {
+      .event_content {
+        padding: 10px;
+        .event_data {
+          .event_details {
+            h3 {
+              a {
+                font-size: $normal-size !important;
+              }
+            }
+            h4 {
+              font-size: $font-14 !important;
+            }
+            p {
+              font-size: $font-12;
+            }
+          }
+        }
+      }
+    }
+  }
+}
