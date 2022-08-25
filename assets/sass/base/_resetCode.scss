@@ -90,6 +90,32 @@ button {
   background-color: transparent;
 }
 
+// or ======>
+
+.or {
+  text-align: center;
+  margin: 13px 0;
+  span {
+    display: block;
+    position: relative;
+    @include textStyle($font-18, $black_color, 400, 0);
+    &::before {
+      @include positions(14px, 0, auto, auto);
+      content: "";
+      width: 46%;
+      height: 1px;
+      background-color: $black_color;
+    }
+    &::after {
+      @include positions(14px, auto, 0, auto);
+      content: "";
+      width: 46%;
+      height: 1px;
+      background-color: $black_color;
+    }
+  }
+}
+
 input,
 textarea {
   outline: 0;
