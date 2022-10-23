@@ -136,6 +136,7 @@
       display: block;
       position: relative;
       img {
+        min-width: 100%;
         border-radius: 5px;
       }
       &::after {
